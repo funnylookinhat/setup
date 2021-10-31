@@ -20,7 +20,14 @@ sudo apt-get install -y \
   software-properties-common jq \
   postgresql-client mysql-client \
   openconnect libsecret-tools gpa \
-  byobu meld
+  byobu meld alacritty
+
+sudo flatpak install -y \
+  io.github.Hexchat \
+  com.mattermost.Desktop \
+  org.flameshot.Flameshot \
+  us.zoom.Zoom \
+  org.videolan.VLC
 
 echo "Configuring git"
 # Optionally run this if you have a GUI
