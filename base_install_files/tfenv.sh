@@ -16,5 +16,7 @@ fi
 
 echo "Installing tfenv to ~/.tfenv"
 
+mkdir -p $HOME/.local/bin
+
 git clone https://github.com/tfutils/tfenv.git $HOME/.tfenv
-ln -s $HOME/.tfenv/bin/tfenv $HOME/bin/tfenv
+ln -s $HOME/.tfenv/bin/tfenv $HOME/.local/bin/tfenv

@@ -5,10 +5,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd $DIR
 
 echo "Updating at sources"
-sudo apt-get update
+sudo apt update
 
 echo "Updating all packages"
-sudo apt-get dist-upgrade -y
+sudo apt full-upgrade -y
 
 echo "Setting up ZSH"
 sudo apt-get install -y zsh
@@ -22,7 +22,9 @@ sudo apt-get install -y \
   openconnect libsecret-tools gpa \
   byobu meld alacritty
 
-sudo flatpak install -y \
+flatpak update --appstream
+
+flatpak install -y \
   io.github.Hexchat \
   com.mattermost.Desktop \
   org.flameshot.Flameshot \
